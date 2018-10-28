@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539323641333.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "235099096",
+    "id" : "C07844BD",
+    "lastKnownWriteTime" : 1540697267,
+    "last_content_update" : 1540697267269,
+    "path" : "C:/Users/alex1/Desktop/getTWSEdata/stock.R",
+    "project_path" : "stock.R",
+    "properties" : {
+        "cursorPosition" : "4,18",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

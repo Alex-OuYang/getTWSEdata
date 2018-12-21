@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1544327426777.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "808BA79A",
+    "lastKnownWriteTime" : 1545373907,
+    "last_content_update" : 1545373907537,
+    "path" : "C:/Users/alex1/Desktop/getTWSEdata/datediff.R",
+    "project_path" : "datediff.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

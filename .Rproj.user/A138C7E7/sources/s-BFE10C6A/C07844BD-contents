@@ -36,6 +36,4 @@ colnames(STOCK)=c("Open","High","Low","Close","Volume")
 View(STOCK)
 
 chartSeries(STOCK,up.col = "red",dn.col = "green",theme = "white",name = stockno)
-addSMA(n=10,col = "blue")
-addSMA(n=20,col = "gray")
-addBBands()
+

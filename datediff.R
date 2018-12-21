@@ -1,14 +1,13 @@
 #開始日期
-a=as.numeric(substr(datestr,1,4))
-b=as.numeric(substr(datestr,5,6)) 
+a=as.numeric(substr(startDate,1,4))
+b=as.numeric(substr(startDate,5,6)) 
 c=01
 
 #現在日期
-now=Sys.Date()
-nowstr=strsplit(as.character(Sys.Date()),"-")
-a1=nowstr[[1]][1]
-b1=nowstr[[1]][2]
-c1=nowstr[[1]][3]
+
+a1=as.numeric(substr(endDate,1,4))
+b1=as.numeric(substr(endDate,5,6)) 
+c1=as.numeric(substr(endDate,7,8)) 
 
 datediff=c()
 

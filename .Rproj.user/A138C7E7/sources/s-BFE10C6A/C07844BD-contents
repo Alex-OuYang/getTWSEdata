@@ -1,8 +1,6 @@
 setwd("C:/Users/alex1/Desktop/getTWSEdata")
 library(quantmod)
 library(jsonlite)
-stockno="2330"
-datestr="20180101"
 
 source("datediff.R")
 datediff=as.matrix(datediff)
@@ -34,7 +32,6 @@ timeVector=as.POSIXct(timeVector)
 STOCK=cbind(as.numeric(STOCK[,2]),as.numeric(STOCK[,3]),as.numeric(STOCK[,4]),as.numeric(STOCK[,5]),as.numeric(STOCK[,6]))
 STOCK=xts(STOCK,as.POSIXct(timeVector))
 colnames(STOCK)=c("Open","High","Low","Close","Volume")
-# View(STOCK)
 
-# chartSeries(STOCK,up.col = "red",dn.col = "green",theme = "white",name = stockno)
+STOCK
 # write.csv(as.matrix(STOCK), file = paste0("StockData/",stockno,".csv"))

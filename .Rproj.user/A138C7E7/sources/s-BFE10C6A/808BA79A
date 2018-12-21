@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "276786678",
     "id" : "808BA79A",
-    "lastKnownWriteTime" : 1545373907,
-    "last_content_update" : 1545373907537,
+    "lastKnownWriteTime" : 1545378461,
+    "last_content_update" : 1545378461978,
     "path" : "C:/Users/alex1/Desktop/getTWSEdata/datediff.R",
     "project_path" : "datediff.R",
     "properties" : {
-        "cursorPosition" : "0,0",
+        "cursorPosition" : "6,0",
         "scrollLine" : "0"
     },
     "relative_order" : 2,

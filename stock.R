@@ -2,7 +2,6 @@ setwd("C:/Users/alex1/Desktop/getTWSEdata")
 library(quantmod)
 library(jsonlite)
 
-source("datediff.R")
 datediff=as.matrix(datediff)
 
 STOCK=c()
@@ -10,11 +9,13 @@ for(i in c(1:nrow(datediff))){
   stockurl=paste0("http://www.twse.com.tw/exchangeReport/STOCK_DAY?date=",datediff[i,],"&stockNo=",stockno)
   urldata=url(stockurl)
   stock=fromJSON(urldata,flatten=T)
-  
+
   STK=cbind(stock$data[,1],stock$data[,4],stock$data[,5],stock$data[,6],stock$data[,7],stock$data[,3])
   STOCK=rbind(STOCK,STK)
   Sys.sleep(sample(10, 1))
 }
+stocktitle=stock$title
+
 STOCK[,2]=as.numeric(STOCK[,2])#O
 STOCK[,3]=as.numeric(STOCK[,3])#P
 STOCK[,4]=as.numeric(STOCK[,4])#C
@@ -33,5 +34,5 @@ STOCK=cbind(as.numeric(STOCK[,2]),as.numeric(STOCK[,3]),as.numeric(STOCK[,4]),as
 STOCK=xts(STOCK,as.POSIXct(timeVector))
 colnames(STOCK)=c("Open","High","Low","Close","Volume")
 
-STOCK
+#STOCK
 # write.csv(as.matrix(STOCK), file = paste0("StockData/",stockno,".csv"))

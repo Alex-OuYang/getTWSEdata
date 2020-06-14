@@ -1,20 +1,27 @@
 rm(list=ls())
 projectPathStr="C:/Users/alex1/Desktop/getTWSEdata"
-stockno="2330"
 nowDateSplit=strsplit(as.character(Sys.Date()),"-")
 nowDate=paste0(nowDateSplit[[1]][1],nowDateSplit[[1]][2],nowDateSplit[[1]][3])
-startDate="20191101"
+startDate="20200101"
 endDate=nowDate
 
-isDownloadData=TRUE
 
 # Download Basic Data
-stocknolist=c("2330","2412")
-source("DownloadBasicData.R")
-downloadData(stocknolist)
+# source("GetCompanyList.R")
+# get all company list
+# stocknolist=c(companylist)
+# stocknolist=c(companylist[1:length(companylist)])
+
+# asign company list
+# stocknolist=c("2330","2882")
+
+# isDownloadData=TRUE
+# source("DownloadBasicData.R")
+# downloadData(stocknolist)
 
 # Show Basic Data
-#source("ShowBasicData.R")
+# stockno="2882" 
+# source("ShowBasicData.R")
 
 # Analysis
 #source("BasicData.R")

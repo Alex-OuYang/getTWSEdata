@@ -1,4 +1,10 @@
 setwd(paste0(projectPathStr,"/BasicData") )
+if(!("quantmod" %in% rownames(installed.packages()))){
+  install.packages("quantmod")
+}
+if(!("jsonlite" %in% rownames(installed.packages()))){
+  install.packages("jsonlite")
+}
 library(quantmod)
 library(jsonlite)
 
@@ -11,7 +17,7 @@ stockFunc=function(stockno,datediff){
     urldata=url(stockurl)
     stock=fromJSON(urldata,flatten=T)
     
-    print(stock)
+    #print(stock)
     
     STK=cbind(stock$data[,1],stock$data[,4],stock$data[,5],stock$data[,6],stock$data[,7],stock$data[,9])
     STOCK=rbind(STOCK,STK)

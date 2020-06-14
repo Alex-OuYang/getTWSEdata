@@ -6,17 +6,13 @@ downloadData=function(stocknolist){
   for(i in stocknolist){
     print(i)
     datediff=datediffFunc(startDate = startDate,endDate = endDate)
-    print(datediff)
     STOCK=stockFunc(stockno = i,datediff = datediff)
     
     #View(STOCK)
     
     for(j in c(1:nrow(datediff))){
-      print(datediff[j])
-      
       if(isDownloadData==TRUE){
-        print(STOCK[substring(datediff[j],1,6)])
-        
+        #print(STOCK[substring(datediff[j],1,6)])
         ouputPath=paste0(projectPathStr,"/StockData/",i,"/",substring(datediff[j],1,4),"/")
         dir.create(file.path(ouputPath),recursive = TRUE,mode = "0777",showWarnings = FALSE)
         write.csv(as.matrix(STOCK[substring(datediff[j],1,6)]), file = paste0(ouputPath,substring(datediff[j],1,6),".csv"))

@@ -2,7 +2,7 @@ rm(list=ls())
 projectPathStr="C:/Users/alex1/Desktop/getTWSEdata"
 nowDateSplit=strsplit(as.character(Sys.Date()),"-")
 nowDate=paste0(nowDateSplit[[1]][1],nowDateSplit[[1]][2],nowDateSplit[[1]][3])
-startDate="20200101"
+startDate="20200401"
 endDate=nowDate
 
 
@@ -20,8 +20,12 @@ endDate=nowDate
 # downloadData(stocknolist)
 
 # Show Basic Data
-# stockno="2882" 
-# source("ShowBasicData.R")
+stockno="2882"
+source("ShowBasicData.R")
+# addBBands(n=20,sd=2,maType = "EMA")
+# addEMA(n=20,col = "blue")
+# addEMA(n=60,col = "purple")
+
 
 # Analysis
 #source("BasicData.R")

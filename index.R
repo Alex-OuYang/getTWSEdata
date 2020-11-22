@@ -1,8 +1,8 @@
 rm(list=ls())
-projectPathStr="C:/Users/alex1/Desktop/getTWSEdata"
+projectPathStr="C:/Users/alex1/Desktop/getTWSEdata/"
 nowDateSplit=strsplit(as.character(Sys.Date()),"-")
 nowDate=paste0(nowDateSplit[[1]][1],nowDateSplit[[1]][2],nowDateSplit[[1]][3])
-startDate="20200401"
+startDate="20200101"
 endDate=nowDate
 
 
@@ -21,7 +21,8 @@ endDate=nowDate
 
 # Show Basic Data
 stockno="2882"
-source("ShowBasicData.R")
+pathStr=paste0(projectPathStr,"BasicData/ShowBasicData.R")
+source(pathStr,encoding="utf-8")
 # addBBands(n=20,sd=2,maType = "EMA")
 # addEMA(n=20,col = "blue")
 # addEMA(n=60,col = "purple")

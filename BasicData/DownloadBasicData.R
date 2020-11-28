@@ -2,6 +2,8 @@ setwd(paste0(projectPathStr,"/BasicData") )
 source("FuncDateDiff.R")
 source("FuncGetStock.R")
 
+doenloadIndex=1
+
 downloadData=function(stocknolist){
   for(i in stocknolist){
     print(i)
@@ -16,6 +18,7 @@ downloadData=function(stocknolist){
         ouputPath=paste0(projectPathStr,"/StockData/",i,"/",substring(datediff[j],1,4),"/")
         dir.create(file.path(ouputPath),recursive = TRUE,mode = "0777",showWarnings = FALSE)
         write.csv(as.matrix(STOCK[substring(datediff[j],1,6)]), file = paste0(ouputPath,substring(datediff[j],1,6),".csv"))
+        Sys.sleep(sample(1:5))
         print(paste0(substring(datediff[j],1,6),".csv Done-------"))
       }
     }

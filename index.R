@@ -9,23 +9,26 @@ encodingStr="utf-8"
 
 baseDataPathStr=paste0(projectPathStr,"BasicData/ShowBasicData.R")
 getCompanyPathStr=paste0(projectPathStr,"BasicData/GetCompanyList.R")
+downloadPathStr=paste0(projectPathStr,"BasicData/DownloadBasicData.R")
+
 
 # Download Basic Data
 source(getCompanyPathStr,encoding = encodingStr)
+
 # get all company list
 # stocknolist=c(companylist)
 # stocknolist=c(companylist[1:length(companylist)])
 
 # asign company list
-# stocknolist=c("2330","2882")
 
-# isDownloadData=TRUE
-# source("DownloadBasicData.R")
-# downloadData(stocknolist)
+stocknolist=company[,2][1:length(company[,2])]
+isDownloadData=TRUE
+source(downloadPathStr,encoding = encodingStr)
+downloadData(stocknolist)
 
 # Show Basic Data
-stockno="2330"
-source(baseDataPathStr,encodingStr)
+# stockno="2330"
+# source(baseDataPathStr,encodingStr)
 # addBBands(n=20,sd=2,maType = "EMA")
 # addEMA(n=20,col = "blue")
 # addEMA(n=60,col = "purple")

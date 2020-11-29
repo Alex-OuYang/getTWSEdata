@@ -1,4 +1,4 @@
-setwd(paste0(projectPathStr,"/BasicData") )
+# setwd(paste0(projectPathStr,"/BasicData") )
 source("FuncDateDiff.R")
 source("FuncGetStock.R")
 

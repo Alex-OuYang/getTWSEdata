@@ -1,4 +1,4 @@
-setwd(paste0(projectPathStr,"/BasicData") )
+# setwd(paste0(projectPathStr,"/BasicData") )
 if(!("quantmod" %in% rownames(installed.packages()))){
   install.packages("quantmod")
 }

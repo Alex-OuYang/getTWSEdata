@@ -2,9 +2,9 @@ rm(list=ls())
 projectPathStr="C:/Users/alex1/Desktop/getTWSEdata"
 setwd(projectPathStr)
 nowDateSplit=strsplit(as.character(Sys.Date()),"-")
-nowDate=paste0(nowDateSplit[[1]][1],nowDateSplit[[1]][2],nowDateSplit[[1]][3])
+endDate=paste0(nowDateSplit[[1]][1],nowDateSplit[[1]][2],nowDateSplit[[1]][3])
 startDate="20200101"
-endDate=nowDate
+#endDate=nowDate
 
 encodingStr="utf-8"
 
